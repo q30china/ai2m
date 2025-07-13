@@ -26,7 +26,7 @@ ai2m/
 │   └── utils/          ← Utility function library
 ├── patents/            ← Patents and software copyrightst
 ├── experiments/        ← Experiment records and analysis
-├── templates/          ← Project templates and configuration files
+├── tenders/            ← Tenders from different countries
 └── README.md           ← Current file
 ```
 
@@ -55,6 +55,12 @@ ai2m/
 - Model tuning logs
 - Performance benchmark tests
 - Commercial value evaluations
+
+### 📁 `tenders/`
+- XXX
+- YYY
+- ZZZ
+
 
 ## Contribution Guidelines
 1. Follow [Conventional Commits](https://conventionalcommits.org/) standards
