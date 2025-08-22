@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+    \PYG{n}{ps} \PYG{o}{=} \PYG{n}{Parser}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{D:/autotable/sample/IEC20\PYGZhy{}三相四线\PYGZhy{}报告输出\PYGZus{}3p.docx}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{ps}\PYG{o}{.}\PYG{n}{parse\PYGZus{}3p\PYGZus{}excel\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{D:/autotable/sample/IEC20\PYGZhy{}}
+    \PYG{n}{三相四线}\PYG{o}{\PYGZhy{}}\PYG{n}{瑞科台子}\PYG{o}{\PYGZhy{}}\PYG{n}{计量误差数据}\PYG{o}{.}\PYG{n}{xls}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{)}
+    \PYG{n}{ps}\PYG{o}{.}\PYG{n}{map\PYGZus{}excel\PYGZus{}to\PYGZus{}docx\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{D:/autotable/indexref\PYGZus{}3p.parquet}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} ps = Parser(\PYGZsq{}D:/autotable/sample/IEC20\PYGZhy{}单相两线\PYGZhy{}双回路\PYGZhy{}报告输出\PYGZus{}1p.docx\PYGZsq{})}
+    \PYG{c+c1}{\PYGZsh{} ps.parse\PYGZus{}1p\PYGZus{}excel\PYGZus{}table(\PYGZsq{}D:/autotable/sample/IEC20\PYGZhy{}单相两线\PYGZhy{}双回路\PYGZhy{}瑞科台子\PYGZhy{}计量误差数据.xls\PYGZsq{})}
+    \PYG{c+c1}{\PYGZsh{} ps.map\PYGZus{}excel\PYGZus{}to\PYGZus{}docx\PYGZus{}table(\PYGZsq{}D:/autotable/indexref\PYGZus{}1p.parquet\PYGZsq{})}
+\end{MintedVerbatim}

@@ -1,0 +1,47 @@
+% This document template is suitable for English articles and cannot use any Chinese characters or punctuation marks - Qiao 2025.8.7
+
+% 此行也不能出现在config.tex中，要放到main.tex中，否则每次本地编译报错，在线没问题
+\documentclass{ol-softwaremanual}   %software manual document Class
+
+% import global config
+\input{default/config}
+
+% begin document
+\begin{document}
+
+\maketitle
+
+% Generate contents
+\tableofcontents
+%\listoflistings
+
+\newpage
+
+% absract
+\begin{abstract}
+This article delivers comprehensive user guides and best‑practice maintenance recommendations for the array of AI‑enabled services hosted on the test center’s AI server. It is crafted for system integrators and operations staff, equipping them to efficiently support these systems and to extend the platform with advanced applications.
+\end{abstract}
+
+% keywords
+\begin{keywords}
+
+  AI, LLM, Open WebUI, ollama, Ragflow, Dify, Agent, OCR, PaddlePaddle, AI4Test, Common Language .....
+  
+\end{keywords}
+
+\newpage
+
+% Main text
+\include{chapter/chp1}
+
+\include{chapter/chp2}
+
+\include{chapter/chp3}
+
+\include{chapter/chp4}
+
+\include{chapter/chp5}
+
+\end{document}
+
+

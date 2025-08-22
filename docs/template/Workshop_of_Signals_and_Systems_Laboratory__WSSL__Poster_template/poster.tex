@@ -1,0 +1,160 @@
+\documentclass[isoft]{ssltexposter}
+
+\usepackage{lipsum}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{subfig} 
+\usepackage{amsmath} 
+\usepackage{textcomp} 
+\usepackage{url}  
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil, english]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%               Configs               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Choose one of the section color {ufglhblue | ufgdkblue | dkblue | black | gold}
+\setsectioncolor{green!50!black}
+
+% Define width of the rule or hide it by setting 0pt or commenting the command 
+\setcolumnseprule{0pt}
+
+% Inform the paths to the logo files or leave empty one or both parameters. 
+% There are three options [ T | M | B ] to positioning them.
+\setlogos[T]{images/logotipo-ufabc-abaixo.eps}{images/lss_logo_font-white_signal-white.pdf}
+
+% Choose one of the background options {1 | 2 | 3}. 
+% Actually, one can select any graphic file in backgrounds directory. 
+\setbackground{1c}
+
+% Resize the title to keep it in two lines // {font size}{line height}
+\settitlesize{64pt}{68pt}
+
+% Resize the font of the content. Default {32pt}{38pt} // {font size}{line height}
+\setcontentfontesize{32pt}{40pt}
+
+% Resize the font of the emails. Default {26pt}{32pt} // {font size}{line height}
+\setemailfontesize{42pt}{40pt}
+
+% General info
+\title{\uppercase{TITLE}} 
+
+\author{Author 1, Author 2, ... , Author N} 
+
+% \department{Laboratório de Sinais e Sistemas\\Universidade Federal do ABC (UFABC)}
+
+\email{ \text{author1, author2, ... , authorN}@aluno.ufabc.edu.br \\\text{author1, author2, ... , authorN}@ufabc.edu.br }
+
+% \class{I Workshop do Laboratório de Sinais e Sistemas (WLSS)}
+
+% \year{2019}
+
+\conference{II Workshop of Signals and Systems Laboratory (WSSL 2019)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           End configs               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\begin{document}
+    \begin{poster}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%             Begin poster            %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \begin{abstract}
+        \normalsize
+        
+        \lipsum[57]
+        
+    \end{abstract}
+    
+    \section{Introduction}
+    
+        \lipsum[57]
+        
+    \section{Methodology}%
+        
+        \subsection{Subsection I}
+        
+        \lipsum[57]
+        
+        \vspace{1cm}
+        
+        \begin{figure}
+            \centering
+            \captionsetup{type=figure}
+            \includegraphics[scale=1.5]{example-image-a}
+            \caption{Example of a figure.}
+            \label{fig:lstm}
+        \end{figure}
+        
+        \subsection{Subsection II}
+        
+            \lipsum[57]
+            
+            \vspace{1cm}
+            \begin{table}
+                \centering
+                \captionsetup{type=table}
+                \caption{Example of a table.}
+                \label{Corpus}
+                \renewcommand{\arraystretch}{1.2}
+                \resizebox{0.47\textwidth}{!}{%
+                \begin{tabular}{ccccccccccc}
+                    \toprule
+                    & \textbf{Column 1} &  &  \textbf{Column 2} &  &  \textbf{Column 3} & &  \textbf{Column 4} &   & \textbf{Column 5} & \\
+                    \midrule
+                    & xxxxx & & xxxxx & & xxxxx & & xxxxx & & xxxxx &\\ 
+                    & yyyyy & & yyyyy & & yyyyy & & yyyyy & & yyyyy &\\ 
+                    & zzzzz & & zzzzz & & zzzzz & & zzzzz & & zzzzz &\\ 
+                    \bottomrule
+                \end{tabular}
+            }
+            \end{table}
+            \vspace{1cm}
+            
+            \lipsum[57]
+            
+            \citep{defects2j}.
+    
+            \subsection{Subsection III}
+                \lipsum[57]
+    
+        \section{Results}%
+                
+            \lipsum[57]  
+    
+            \begin{figure}
+                \centering
+                \captionsetup{type=figure}
+                \includegraphics[scale=1.5]{example-image-b}
+                \caption{Another example of a figure.}
+                \label{fig:result}
+            \end{figure}
+    
+            \lipsum[57]
+            \cite{chollet2015keras}     
+    
+        \section{Conclusion}
+    
+            \lipsum[57]
+    
+        \section{Acknowledgment}
+    
+            \lipsum[57]
+    
+        \bibliographystyle{abbrv}
+        \bibliography{refs}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%               End poster            %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \end{poster}
+
+\end{document}
+
+ 

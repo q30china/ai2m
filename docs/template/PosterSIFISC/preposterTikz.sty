@@ -1,0 +1,166 @@
+
+% 这是一份完整的LaTeX海报的前置文件（preamble）
+% 主要功能如下：
+% 1.加载常用宏包
+% 2.定义大量颜色与排版式样
+% 3.通过TikZ+PGFPlots绘制可自定义的背景/标题/页脚
+% 4.给“例子”定义“之类的环境做简单样式化
+
+% sciposter里边加载了color，xcolor和color有冲突，只是报警，不影响编译，这是比较经典的问题，这里隐藏掉警告，眼不见心不烦。
+
+\usepackage{silence}
+% 隐藏烦人的警告
+\WarningFilter{xcolor}{Incompatible color definition}
+\WarningFilter{xcolor}{Incompatible color}
+
+% \usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage[T1]{fontenc}               % 提供中文编码支持
+\usepackage{CJKutf8}
+% \usepackage[brazil]{babel}           % 西班牙语葡语排版
+\usepackage[utf8]{inputenc}            % pdfLaTex必须
+\usepackage[centertags]{amsmath}       % 数学相关
+\usepackage{multirow,multicol}         %表格相关
+%\usepackage{colortbl}
+\usepackage{lipsum}                    %text suggestion
+\usepackage{geometry}
+\usepackage{standalone}
+\usepackage{tikz,pgfplots,tikz-3dplot} % 3D绘图支持
+\usepackage{graphicx,wrapfig}          % 插入图片及环绕文本
+\usepackage{physics}                   % 物理公式
+\usepackage{amsfonts}                  % 额外符号和字体
+\usepackage{amssymb}                   
+\usepackage{setspace}                  % 行距控制
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\pagestyle{plain}                      % 页眉去掉，只留页码
+
+%%Turning everything into blank
+\renewcommand{\thesection}{\textcolor{white}{\arabic{section}}}
+\renewcommand{\thesubsection}{\textcolor{white}{\arabic{section}.\arabic{subsection}}}
+
+%%Defining colors
+\definecolor{BoxCol}{RGB}{0,60,100} %azul
+%palette:  Citrus Fruits
+%http://www.colourlovers.com/palette/1653416/Citrus_Fruits
+\definecolor{marrom}{RGB}{200,77,0}
+\definecolor{mandarin}{RGB}{246,116,20}
+\definecolor{myyellow}{RGB}{244,107,2}
+\definecolor{amarelolimao}{RGB}{252,223,69}
+\definecolor{verde}{RGB}{0,192,0}
+%palette:  Me BEDRUME
+%http://www.colourlovers.com/palette/1653495/Me_BEDRUME
+\definecolor{twoblue}{RGB}{16,126,160} %azul
+\definecolor{greenish}{RGB}{57,202,131} %verde
+\definecolor{rosa}{RGB}{249,177,197} %rosa
+\definecolor{PeachKeen}{RGB}{249,171,104} %laranja
+\definecolor{MandarinSorbet}{RGB}{249,247,119} %amarelo
+%palette: Teal to Yellow
+%http://www.colourlovers.com/palette/1653453/Teal_to_Yellow
+\definecolor{GreenTedious}{RGB}{0,222,155} %green
+\definecolor{GreenSublime}{RGB}{97,255,48} %green
+\definecolor{GreenTeal}{RGB}{148,255,48} %grenn
+\definecolor{YellowFishEggs}{RGB}{255,252,48} %yellow
+\definecolor{OrangeLampLight}{RGB}{255,193,48} %orange
+\definecolor{mywhite}{RGB}{255,255,255} %white
+
+%%Defines the path of the figures, valid only for the includegraphics command
+\graphicspath{{Figuras}}
+%********************************************************************
+%%Theorem
+\usepackage{theorem}
+\theorembodyfont{\normalfont\upshape}
+\newtheorem{ex}{Exemplo}
+\newenvironment{defn}[1][Defini\c{c}\~ao]{\textbf{#1:}\
+}%
+%********************************************************************
+%%Defining new commands
+
+% \newcommand{\titleA}[1]{\emph{\large \textbf{\color{mywhite}{#1}}}}
+
+\newcommand{\titleA}[1]{\emph{\small \textbf{\color{mywhite}{#1}}}}
+
+\newcommand{\titleB}[1]{\emph{\large \textbf{\color{myyellow}{#1}}}}
+\newcommand{\R}{\mathbb{R}}
+
+%%Background image (background)
+\newcommand{\imgfundo}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+  \tikzset{inner sep=0pt,outer sep=0pt}
+    %%Centralized on the page.
+    \node at (current page.center) {
+      \includegraphics[height=\paperheight]{#1} %%Figure of the height of the paper.
+    };
+\end{tikzpicture}
+}
+
+%%Title made with TikZ
+\newdimen\altura
+\altura=12cm
+\newcommand{\mytitle}[3]{
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west){
+  \begin{tikzpicture}[remember picture,overlay]
+      \draw[fill=#3] (-3cm,0) rectangle (\paperwidth,-\altura);
+      \node[right] at (-0.8cm,-.65*\altura) {
+	\includegraphics[height=12cm]{#1} %%First logo
+      };
+  \end{tikzpicture}
+};
+\node at (current page.north east){
+  \begin{tikzpicture}[remember picture,overlay]
+  \filldraw[white] (-14.4cm,0) rectangle (0,-1.01*\altura);
+      \node[left] at (-2.9cm,-.61*\altura) {
+	\includegraphics[height=9.5cm]{#2} %%Second logo
+      };
+      \filldraw[myyellow](-15.5cm,0) rectangle (-14.4cm,-\altura);
+      
+  \end{tikzpicture}
+};
+\node at (current page.north){
+  \begin{tikzpicture}[remember picture,overlay,node distance=2mm]
+    \node[white] (n1) at (-1.5,-4) {\shortstack{\Large\textbf{\titleposter}}};
+    \node[white] (n2) [below = of n1] {\shortstack{\Large\textbf{\bigtitle}}};
+    \node[white] (n3) [below = of n2] {\name};
+    \node[white] (n4) [below = of n3] {\small{\institutional}};
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+}
+
+%%Name of the conference made with TikZ
+\newcommand{\congresso}[1]{
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north){
+  \begin{tikzpicture}[remember picture,overlay]
+     \draw[fill=#1] (-.5*\textwidth-2cm,-13.25) rectangle (.5*\textwidth-2cm,-14.75);
+     \node[white] at (-2cm,-14) {\Large{
+	\nomecongresso \qquad --- \qquad \textbf{\abrev}
+      }};
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+}
+
+%%cover made with TikZ
+\newcommand{\rodape}[3]{
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.south west){
+  \begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+      \draw[fill=#3] (0,0) rectangle (\paperwidth,5);
+      \node[above right] at (4cm,1) {
+	\includegraphics[height=3cm]{#1} %%Third logo
+      };
+  \end{tikzpicture}
+};
+\node[yshift=2cm,yellow] at (current page.south){\url{http://latexbr.blogspot.com}};
+\node at (current page.south east){
+  \begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+      \node[above left] at (-4cm,1) {
+	\includegraphics[height=3cm]{#2} %%Fourth logo
+      };
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+}

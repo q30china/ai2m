@@ -1,0 +1,42 @@
+Code can be printed using the minted or listings packages, or several other tools.
+Listing~\ref{listing:octave} shows an example of typesetting code from an external file.
+
+\begin{listing}
+\inputminted{octave}{code/BitXorMatrix.m}
+\caption{Example from external file}
+\label{listing:octave}
+\end{listing}
+
+Alternatively, code can be written directly in your .tex files, as in Listing~\ref{listing:py}.
+It's also possible to typeset syntax-highlighted code inline with a number of code listing packages.
+Check the documentation for the package you're using for more details.
+For example, section~3.3 of the \doclink{http://texdoc.net/pkg/minted}{Minted package documentation} gives some examples and guidelines, as does our help article on \doclink{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{code highlighting with minted}. Forums such as \doclink{https://tex.stackexchange.com/}{TeX StackExchange} and \doclink{https://latex.org/forum/}{LaTeX Community} are also a great source of tips.
+
+\begin{listing}
+\begin{minted}{python}
+print("Hello World")
+\end{minted}
+\caption{Example Python code}
+\label{listing:py}
+\end{listing}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.95\linewidth]{zabbix_qgis_page0.png}\\
+        \caption{ Qgisweb.}\label{zabbix_qgis_page0}
+    \end{center}
+\end{figure} 
+
+
+\vspace{-.7cm}
+\begin{enumerate}
+    \item Server address: 172.16.33.244
+    \item Admin User name: Administrator, Password: hexing@2025
+    \item User name : ems, Password: sme8003
+\end{enumerate}
+
+\colorline[red]{1pt}
+\colorline[green!60!black]{1.5pt}
+\colorline[gray]{0.1pt}
+\shortdashline

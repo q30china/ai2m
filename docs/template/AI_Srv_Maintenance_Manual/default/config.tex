@@ -1,0 +1,90 @@
+%% Overleaf			
+%% Software Manual and Technical Document Template	
+%% 									
+%% This provides an example of a software manual created in Overleaf.
+
+
+
+
+% Packages used in this example
+\usepackage{graphicx}  % for including images
+\usepackage{microtype} % for typographical enhancements, Provide micro layout enhancement function to improve details such as word spacing and linking
+\usepackage{minted}    % for code listings
+\usepackage{amsmath}   % for equations and mathematics
+\setminted{style=friendly,fontsize=\small}  % for code highlight, fontsize == small
+
+\renewcommand{\listoflistingscaption}{List of Code Listings}   %Redefine the title of the code list as' List of Code Listings'
+
+\usepackage{hyperref}  % for hyperlinks
+\usepackage[a4paper,top=2.2cm,bottom=2.2cm,left=2.5cm,right=2.5cm]{geometry} % for setting page size and margins
+\usepackage{xcolor}       % color
+\usepackage{listings}     % for code highlight, specially for bash command
+\usepackage{enumitem}     % Provide customized list environment functionality
+
+% Custom macros used in this example document
+\newcommand{\doclink}[2]{\href{#1}{#2}\footnote{\url{#1}}}  % Define the \ doclink command to create hyperlinks with footnotes, example: \doclink{URL}{disjplay text}
+
+\newcommand{\cs}[1]{\texttt{\textbackslash #1}}  %Define the \ cs command to display LaTeX commands
+
+% Frontmatter data; appears on title page
+\title{AI Server Maintenance \\Manual}
+\version{1.0.0}
+\author{Qiao Lei}
+\softwarelogo{\includegraphics[width=6cm]{res/Logo.png} \vspace{6cm}}    % vspace{6cm}, Leave a vertical spacing of 6cm behind the image
+
+% ---------code minted highlight configure---------------------------------
+% line number,frame,font,backgroud,etc..... pay attention to overleaf free plan , no bash highlight, need use the package listings for bash...
+\definecolor{bgcolor}{HTML}{F5F5F5}
+\setminted{
+    fontsize=\small,
+    style=colorful,       
+    linenos,
+    numbersep=5pt,
+    xleftmargin=1em,
+    frame=lines,
+    framesep=1mm,
+    tabsize=4,
+    baselinestretch=1.5,
+    bgcolor=bgcolor        % first use \definecolor to define
+}
+
+%
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{150,0,0}
+\definecolor{mygray}{RGB}{128,128,128}
+\lstdefinestyle{ShellStyle}{
+  language=bash,
+  keywordstyle=\color{magenta}\bfseries,
+  commentstyle=\color{mygreen}\itshape,
+  stringstyle=\color{myred},
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{mygray!5},
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{mygray},
+  tabsize=4,
+  breaklines=true,
+  showstringspaces=false
+}
+\lstset{style=ShellStyle}
+
+\newcommand{\shortdashline}[1]{%
+  \noindent\makebox[\textwidth][c]{%
+    \xleaders\hbox{\textemdash}\hfill
+  }
+}
+
+\newcommand*{\colorline}[2][red]{%
+  \par
+  \noindent
+  \makebox[\linewidth][c]{%
+    \color{#1}\rule{\linewidth}{#2}%
+  }%
+  \par
+}
+
+\newcommand{\keywords}[1]{%
+  \par\noindent\textbf{Keywords:}\;#1\par
+}
+
+\renewcommand{\abstractname}{\Large\bfseries Abstract}

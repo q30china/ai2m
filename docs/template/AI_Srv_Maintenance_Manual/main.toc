@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Server Information}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Hardware basic information}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Login Address}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}AI Related System}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ollama - AI local LLM inference server}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2} Open WebUI - web interface for LLM chat}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3} Ragflow - Retrieval‑Augmented Generation (RAG) systems}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4} Dify - low‑code AI development framework }{12}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5} PaddleOCR }{15}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6} AI4Test }{18}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Closing remarks}{24}{section.3}%

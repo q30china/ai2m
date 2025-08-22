@@ -1,0 +1,59 @@
+%% Template for posters
+
+\documentclass[36pt]{sciposter}
+
+\usepackage{preposterTikz} % preamble pakcage
+
+\geometry{paperwidth=90cm,paperheight=100cm,centering,
+    textwidth=85cm,textheight=94cm,left=0cm,top=2cm}
+
+\pgfplotsset{compat=1.18}  % 绘图，坐标轴，颜色高级功能都集中在pgfplots包中
+%********************************************************************
+%********************************************************************
+
+\begin{document}
+
+\onehalfspacing
+
+%%Fill in the commands below with your data.
+\newcommand{\titleposter}{JOB TITLE JOB TITLE JOB TITLE}%%titulo do poster
+\newcommand{\bigtitle}{JOB TITLE} %%Fill in the parentheses only if the title does not fit on one line.
+%%ATTENTION: If you are not going to use the second line, just leave nothing between "{}".
+\newcommand{\name}{Surname 1$^{(a)}$, name1, Surname 2$^{(b)}$, name2, Surname 3$^{(b)}$, name3} %%your name
+\newcommand{\institutional}{$(a)$ Institution 1, $(b)$. Institution 2} %%institution
+
+
+%%Title created with TikZ (using \newcommand).
+\mytitle{sifsc}{QuadradoBranco}{BoxCol} %blue
+%Place the SIICUSP logo in the white square.
+
+\vspace{4cm} 
+
+\input{Sections/Summary.tex}
+
+%%Text in 2 columns
+\begin{multicols}{2}
+
+%%Paragraph.
+\setlength{\parindent}{3em}
+
+\input{Sections/Objectives}
+
+
+\input{Sections/Methodology}
+
+
+\input{Sections/Results}
+
+
+\input{Sections/Conclusions}
+
+\input{Sections/References}
+
+\input{Sections/Supporters}
+
+
+
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass{beamer}
+\usepackage{amsfonts,amsmath,oldgerm}
+\usetheme{sintef}
+\usepackage{xeCJK}
+
+\newcommand{\testcolor}[1]{\colorbox{#1}{\textcolor{#1}{test}}~\texttt{#1}}
+
+%set CJK font
+\setCJKmainfont{方正楷体简体.ttf}
+\setCJKsansfont{方正楷体简体.ttf}
+\setCJKmonofont{方正楷体简体.ttf}
+
+\usefonttheme[onlymath]{serif}
+
+\titlebackground*{assets/bk.pdf}
+
+
+\newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
+
+%\title{报告标题}
+%\subtitle{报告副标题}
+% \course{Master's Degree in Computer Science}
+%\author{作者1、作者2}
+% \IDnumber{1234567}
+%\date{2023年7月}
+
+
+\title{海外配用电事业群测试部}
+\subtitle{2025半年度汇报材料}
+\author{\href{mailto:qiaolei@hxgroup.com}{QiaoLei}}
+\date{2025-8-20}
+%\course{test}
+\IDnumber{15158869595}
+
+%\titlebackground{}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}
+
+这模板是基于SINTEF的beamer模板修改而来, 适合报告和答辩使用。
+
+\vspace{\baselineskip}
+
+\begin{itemize}
+    \item logo大小: 257*364 mm
+    \item bk背景图大小: 250.614*182.88 mm
+    \item RGB: 通过AI的拾色器双击填色框,得到: 14,77,117
+    \item CMYK: 94,74,41,4
+    \item Html: 0E4D75
+\end{itemize}
+
+\vspace{\baselineskip}
+
+\end{frame}
+
+\input{contents/chap1.tex}
+
+\input{contents/chap2.tex}
+
+\input{contents/chap3.tex}
+
+\backmatter
+\end{document}

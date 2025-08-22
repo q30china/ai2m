@@ -1,0 +1,25 @@
+
+% 此文档类需要在main.tex中，不能放到config.tex中，本地编译的时候总是报错。
+\documentclass[12pt,a4paper]{article}   % 12pt 论文常用字号, A4 纸张，这里需要用a4pater，不能用a4
+
+% 导入全局配置
+\input{default/config}
+
+% ---------------------------------------------------------------
+%  以下为正式文档
+% ---------------------------------------------------------------
+\begin{document}
+
+% 导入正文前面部分
+\input{default/cover}
+
+% 导入正文
+\input{contents/content}
+
+\input{contents/contents2}
+
+\input{appendix/appendix}
+
+\end{document}
+
+

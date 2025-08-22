@@ -1,0 +1,229 @@
+% ========================================================
+%  中文写作 LaTeX 模版（XeLaTeX）
+%  适合论文、报告、技术文档、书籍等
+%  ========================================================
+
+% --------- 1. 文档类与编码 ------------------------------------
+\setlength{\parskip}{1.2em}  %em是当前字体大小的单位，设置这个后，会取消默认的段落首行缩进
+
+\setlength{\parindent}{0pt}            % 这里是首行缩进的设置，若想取消，打开注释即可
+
+% --------- 2. 基本宏包 ----------------------------------------
+\usepackage{xeCJK}        % 中文支持（XeLaTeX）
+\usepackage{fontspec}     % 直接使用系统字体
+\usepackage{geometry}     % 页面边距和版式
+\usepackage{setspace}     % 行距，可使用\doublespacing 设置双倍行距
+\usepackage{titlesec}     % 自定义章节标题，后面会配置section和subsection的格式
+\usepackage{fancyhdr}     % 页眉页脚自定义
+\usepackage{hyperref}     % 生成 PDF 超链接，自动为目录，引用等生成超链接，为pdf添加交互功能
+\usepackage{graphicx}     % 插入图片，支持pdf，png，jpg
+\usepackage{caption}      % 调整图表标题格式
+\usepackage{natbib}       % 参考文献管理
+\usepackage{amsmath,amssymb} % 数学公式，AMS数学符号和公式环境
+\usepackage{subcaption}   % 子图环境，可以创建带有(a)、(b)等标签的子图
+\usepackage{listings}     % 代码高亮，这里主要使用bash等命令的高亮，其它的如python，html还是用minted
+\usepackage{xcolor}       % 颜色
+%\usepackage{array}       % keywords那里使用，提供表格增强包
+\usepackage{booktabs}     % toprule\botomrule\midrule，专业质量的表格线
+\usepackage{minted}       % 代码高亮显示，比listings包更强大
+\usepackage{multirow}     % table，表格的多行合并功能
+\usepackage{fontawesome5} % 提供Font Awesome图标, 比如页脚faPhone
+\usepackage{lastpage}     % lastpage，获取总页数
+%\usepackage{abstract}    % abstract，摘要环境
+\usepackage{indentfirst}  % first line，确保每个章节的第一段首行缩进
+%\usepackage{ctex}        % ctex宏包是LaTeX中处理中文文档的核心工具之一，它提供了全面的中文排版支持，简化了中文文档的制作流程。这里不要打开，会产生报警。自己控制即可。
+
+% --------- 3. 页面设置（大小、边距） --------------------------
+% \geometry{a4paper, headheight=18pt, left=30mm, right=30mm, top=30mm, bottom=35mm}
+
+\geometry{a4paper, headheight=18pt, left=25mm, right=25mm, top=22mm, bottom=22mm}
+% headheight 页眉高度18pt, 左右边距25，上下边距22
+
+\doublespacing            % 行距 1.5 倍行距
+
+% --------- 4. 中文字体 ---------------------------------------
+% 默认中文字体（SimSun）可以换成你系统中存在的字体
+% 例如：\setCJKmainfont[BoldFont=SimHei]{Microsoft YaHei}
+
+% 在overleaf上使用，建议使用开源字体
+% 文泉驿系列字体（WenQuanYi）
+% 举例： \setCJKmainfont[BoldFont=WenQuanYi Zen Hei Bold]{WenQuanYi Micro Hei}  Linux平台默认开源黑体
+
+% 思源系列字体（Source Han） 思源黑体‌（Source Han Sans）,思源宋体‌（Source Han Serif）
+% Noto	Google 的字体项目名称，旨在支持全球所有语言，避免“豆腐块”（□）字符。
+% Sans	表示“无衬线”（sans-serif），字体线条简洁、现代，没有额外的装饰笔画。
+% Mono	表示“等宽”（monospaced），每个字符占据相同的水平空间，适合代码排版。
+% CJK	指 Chinese, Japanese, Korean（中日韩），表示该字体支持中日韩统一表意文字。
+% SC	是 Simplified Chinese 的缩写，表示这是简体中文版本。
+
+% \setCJKmainfont{Noto Sans CJK SC}       % 正文字体，Google和Adobe合作开发的开源字体，（思源黑体简体）
+% \setCJKsansfont{SimHei}                 % 无衬线字体为黑体
+% \setCJKmonofont{Noto Sans Mono CJK SC}  % 等宽字体，
+
+% Mac本地编译时，用下面这组，字体找不到，会提示一堆错误
+%\setCJKmainfont{Noto Sans SC}[BoldFont=Hei]       % 正文字体，Google和Adobe合作开发的开源字体，（思源黑体简体）
+\setCJKmainfont{宋体-简}       % 正文字体，宋体-简
+\setCJKsansfont{黑体-简}                 % 无衬线字体              % 无衬线字体为黑体
+\setCJKmonofont{Noto Sans SC}  % 等宽字体，
+ 
+%\usepackage[scheme=plain]{ctex}        % 自动选择字体，ctex这个包没有使用过
+
+
+% ---------5.英文字体（可选）---------------------------------------
+\setmainfont{Times New Roman}                     % 西文字体（英文字母、公式、参考文献等），学术论文常用衬线字体
+\setsansfont{Arial}                               % 无衬线英文字体
+
+
+% --------- 6. 标题、目录、页眉页脚 -----------------------------
+
+\titlespacing*{\section}
+    {0pt}    % 左边缩进（通常为 0）
+    {0em}    % 标题**前面**的间距（上间距）
+    {0.2em}  % 标题**后面**的间距（下间距）
+
+\titlespacing*{\subsection}
+    {0pt}    % 左边缩进（通常为 0）
+    {0em}    % 标题**前面**的间距（上间距）
+    {0.2em}  % 标题**后面**的间距（下间距）
+    
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{} % 正常字体，Large大小，加粗，编号和标题间距：1em
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+
+% 页眉页脚（可自行修改）
+%\fancyhf{}
+%\fancyhead[L]{这是页眉显示}     % 第一栏：章节标题
+%\fancyhead[R]{\thepage}      % 第二栏：页码
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\pagestyle{fancy}
+
+% 页眉 页脚
+\definecolor{customblue}{HTML}{00469C}  % 定义自定义颜色customblue，HTML代码为00469C
+% fancy 指的是 fancyhdr 宏包 提供的一种页眉页脚样式，全称是 "fancy page style"。
+\pagestyle{fancy}  % 使用fancy页眉页脚样式
+
+\setlength{\headheight}{30.36pt}  % 设置页眉高度40pt，设置太小，低于30.35004pt，编译会有warning
+\setlength{\footskip}{15.5pt}    % 设置页脚与正文间距15.5pt. 如果设置30pt，文字和页脚的横线中间留白会很多，最小15.49998
+\fancyhf{}  % 清空默认的页眉页脚设置
+
+\fancyhead[L]{\includegraphics[height=20pt]{res/logo.png}}   % 页眉左侧插入图片，高度25pt
+% \fancyhead[R]{\color{customblue}\thepage}  % 页眉右侧插入当前页码
+
+\renewcommand{\headrulewidth}{1pt}  % 设置页眉分隔线宽度为1pt
+\renewcommand{\footrulewidth}{1pt}  % 设置页脚分隔线宽度为1pt
+
+% 设置页眉页脚分隔线颜色为customblue
+\renewcommand{\headrule}{{\color{customblue}\hrule width\headwidth height\headrulewidth}}
+\renewcommand{\footrule}{{\color{customblue}\hrule width\headwidth height\footrulewidth}}
+
+% Left part of foot，页脚左侧部分
+\fancyfoot[L]{
+    \scriptsize   % 设置字体大小为scriptsize(比正文默认字体小一号)
+%    Zhejiang Hangzhou  / Moganshan road: 1418-5\\
+    % 使用Font Awesome图标(\faPhone)显示电话图标， \quad 插入一个等于当前字体大小的水平间距(约1em)
+    % \faGlobe显示地球图标，使用之前定义的customblue颜色，\texttt使用等宽字体显示网址
+    \faPhone~+86 15158869595 \quad \faGlobe~\textcolor{customblue}{\underline{\texttt{http://www.xxx.com}}}
+}
+
+% Right part of foot，页脚的右侧部分
+\fancyfoot[R]{
+    \scriptsize
+    Page \thepage~of~\pageref{LastPage}
+}
+
+% Center part of foot  这个raisebox如果改为-10pt, 则页码page那块上面留白比较大
+\fancyfoot[C]{}
+
+\fancyfoot[R]{\raisebox{0pt}{\scriptsize Page \thepage~of~\pageref{LastPage}}}  % 这里垂直位移调整，为了和左侧对齐
+
+
+% --------- 7. 参考文献风格 ------------------------------------
+% plain 的增强版，支持 natbib 宏包，兼容作者-年份和数字引用，推荐！现代文档首选，支持 APA 风格
+% apalike，模拟 APA（美国心理学会）格式，作者-年份风格，心理学、社会科学、需要 APA 风格的论文
+\bibliographystyle{plainnat}    % 也可以改为 plain / apalike / authoryear 等
+% 下面的 .bib 文件在编译时会被调用：\bibliography{references}
+
+
+%--------- 8. 代码颜色 & 高亮 ，这里用listings 定制shell 命令样式 ---------------------------------
+%\lstset{
+%  basicstyle=\ttfamily\small,
+%  breaklines=true,
+%  frame=single,
+%  numbers=left,
+%  numberstyle=\tiny,
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{gray},
+%  stringstyle=\color{red}
+%}
+
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{150,0,0}
+\definecolor{mygray}{RGB}{128,128,128}
+
+% 全局定义名为ShellStyle的代码样式，后面只需要 \begin{lstlisting} \end{lstlisting} 就可以使用，\begin{lstlisting}[style=OtherStyle]，也可以临时使用其它代码样式。
+% 语言：bash，关键字样式：洋红色、加粗，注释样式：mygreen颜色，字符串样式：myred颜色，基础样式：小号等宽字体，
+% 背景色：mygray的5%透明度, 边框：单线框, 行号：左侧显示, 行号样式：小号、mygray颜色, 制表符大小：4空格, 自动换行：启用，不显示字符串中的空格
+
+\lstdefinestyle{ShellStyle}{
+  language=bash,
+  keywordstyle=\color{magenta}\bfseries,
+  commentstyle=\color{mygreen},
+  stringstyle=\color{myred},
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{mygray!5},
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{mygray},
+  tabsize=4,
+  breaklines=true,
+  showstringspaces=false
+}
+\lstset{style=ShellStyle}
+
+
+% --------- 9.设置keywords环境 ---------------------------------
+% 把关键词包装成一个环境，可以通过 \keywords{LaTeX, 模板, 中文排版} 使用
+\newcommand{\keywords}[1]{%
+  \par\noindent\textbf{关键词:}\;#1\par
+}
+
+% --------- 10.代码块minted代码高亮设置---------------------------------
+% 设定行号、框架、字体、背景等
+\definecolor{bgcolor}{HTML}{F5F5F5}   % 定义背景色bgcolor为浅灰色
+ 
+\setminted{
+    fontsize=\small,
+    style=colorful,        % Pygments 提供的样式，如 github、borland、friendly 等
+    linenos,               % 显示行号
+    numbersep=5pt,         % 行号与代码间距：5pt
+    xleftmargin=1em,       % 左边距：1em
+    frame=lines,           % 边框：lines样式
+    framesep=2mm,          % 边框间距：2mm
+    tabsize=4,             % 制表符大小：4空格
+    baselinestretch=1.3,   % 行距：1.3倍
+    bgcolor=bgcolor        % 需要先用 \definecolor 定义
+}
+
+% --------- 11.第一页特殊处理下---------------------------------
+% FIRST PAGE
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \thispagestyle{fancy}             % 默认 titlepage 使用 plain（只有页码在底部居中），这里我们改成 fancy，以便可以自定义页眉页脚（比如加 logo、线条、颜色等）。
+    \begin{center}
+      \vspace*{9cm}                   % 标题下移9cm
+      {\LARGE \@title \par}           % Large字体，\par确认换行
+      \vspace{1cm}                    % 作者信息下移1cm   
+      {\@author \par}
+      \vfill                          % 插入可伸缩的垂直空间，会自动填满剩余空间,用于将下面的内容“推到底部”。
+      HangZhou\\
+      \the\year-\ifnum\month<10 0\fi\the\month   % 判断月份是否小于 10，如果是，前面加 0，确保输出两位数格式（如 08 而不是 8）
+%      \vspace{11cm}                  % 前面用了 \vfill，所以这行可能用于微调底部位置，或兼容不同页面尺寸。
+    \end{center}
+  \end{titlepage}
+}
+\makeatother

@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{protocol}
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Bright}{HTML}{58318f}
+\definecolor{Green}{HTML}{319866}
+\definecolor{Black}{HTML}{111111}
+\definecolor{LightGrey}{HTML}{515c50}
+\colorlet{heading}{Green}
+\colorlet{accent}{Bright}
+\colorlet{emphasis}{Black}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \risk if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faSpinner}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{A Standerd Protocol}
+\tagline{This is the simple version of a complex protocol}
+\made{October 2 2017}
+\logo{6.5cm}{"Logo"}
+
+
+\docinfo{%
+  % can add more \addedtopeople
+  \madeby{Name}{abv1@uni.ac.uk}{October 2, 2017}
+  \addedto{John Smith}{abv1@uni.ac.uk}{October 3, 2017}
+}
+
+
+\purpose{
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta dui a fermentum varius. Aliquam cursus urna sit amet urna sollicitudin, vel pellentesque turpis imperdiet. Aenean lectus neque, rhoncus vel.
+} % add a short discription of the purpose for this protocol
+
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makeheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \need.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \need title in the "main" bar.
+\need[materials]{Protocol}
+
+\step{1}{Lorem ipsum dolor sit amet, consectetur}{20}
+\begin{itemize}
+	\item Take one of x and then
+	\item Then do the next thing
+	\item Then do the next thing
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+\step{2}{Pellentesque habitant morbi tristique senectus}{35}
+\begin{itemize}
+	\item Then do the next thing
+	\item Then do the next thing
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+\step{3}{habitant morbi tristique senectus}{40}
+\begin{itemize}
+	\item Then do the next thing
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+\step{4}{Ut quis orci luctus, efficitur sem vitae}{25}
+\begin{itemize}
+	\item Do this using the method in the bib file (\cite{einstein})
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+\step{5}{orbi tristique senectus}{30}
+\begin{itemize}
+	\item Then do the next thing
+	\item Then do the next thing
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+\step{6}{ipsum dolor sit amet}{15}
+\begin{itemize}
+	\item Then do the next thing as done by \cite{einstein}
+	\item Then do the next thing
+	\item Then do the next thing
+	\item Then do the next thing
+\end{itemize}
+\divider
+
+
+\clearpage
+
+\need[otherinfo]{Sources}
+
+\nocite{*}
+
+\printbibliography
+
+
+\divider
+
+
+%% If the NEXT page doesn't start with a \need but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}

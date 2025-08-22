@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} read parquet file}
+\PYG{n}{parquet\PYGZus{}file} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{indexref\PYGZus{}3p.parquet}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{从Parquet文件读取验证:}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pl}\PYG{o}{.}\PYG{n}{read\PYGZus{}parquet}\PYG{p}{(}\PYG{n}{parquet\PYGZus{}file}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} modify the DataFrame}
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{with\PYGZus{}columns}\PYG{p}{(}
+    \PYG{n}{pl}\PYG{o}{.}\PYG{n}{when}\PYG{p}{(}\PYG{n}{pl}\PYG{o}{.}\PYG{n}{col}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{table\PYGZus{}index}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{eq}\PYG{p}{(}\PYG{l+m+mi}{78}\PYG{p}{)}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{}条件判断，判断table\PYGZus{}index是否等于78}
+    \PYG{o}{.}\PYG{n}{then}\PYG{p}{(}\PYG{n}{pl}\PYG{o}{.}\PYG{n}{lit}\PYG{p}{(}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{modified}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{}如果条件满足，则将\PYGZsq{}table\PYGZsq{}列的值修改为\PYGZsq{}modified\PYGZsq{}}
+    \PYG{o}{.}\PYG{n}{otherwise}\PYG{p}{(}\PYG{n}{pl}\PYG{o}{.}\PYG{n}{col}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{table}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{}否则保持原来的\PYGZsq{}table\PYGZsq{}列的值}
+    \PYG{o}{.}\PYG{n}{alias}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{table}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{}重命名列为\PYGZsq{}table\PYGZsq{}}
+\PYG{p}{)}
+\end{MintedVerbatim}

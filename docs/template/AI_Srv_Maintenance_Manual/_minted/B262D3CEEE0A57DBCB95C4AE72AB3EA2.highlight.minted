@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{iframe}
+\PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}http://172.16.33.244:8080/chat/share?shared\PYGZus{}id=da54fcfe}
+\PYG{l+s}{f9a311efa8a70242ac120006\PYGZam{}from=chat\PYGZam{}auth=}
+\PYG{l+s}{FiYWQ3MzMwZjgxMzExZWZhNmZlMDI0Mm\PYGZdq{}}
+\PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}width: 100\PYGZpc{}; height: 100\PYGZpc{}; min\PYGZhy{}height: 600px\PYGZdq{}}
+\PYG{n+na}{frameborder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}
+\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{iframe}\PYG{p}{\PYGZgt{}}
+\end{MintedVerbatim}

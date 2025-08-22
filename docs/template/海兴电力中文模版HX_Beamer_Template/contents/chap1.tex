@@ -1,0 +1,86 @@
+\section{2024年工作总结}
+
+\begin{frame}{现有人员架构组成}
+\begin{itemize}
+\item We assume you can use \LaTeX; if you cannot,
+\hrefcol{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
+\item Beamer is one of the most popular and powerful document
+classes for presentations in \LaTeX
+\item Beamer has also a detailed
+\hrefcol{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user
+ manual}
+\item Here we will present only the most basic features to get you up to speed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{集成测试室重点工作}
+Compared to PowerPoint, using \LaTeX\ is better because:
+\begin{itemize}
+\item It is not What-You-See-Is-What-You-Get, but
+What-You-\emph{Mean}-Is-What-You-Get:\\
+you write the content, the computer does the typesetting
+\item Produces a \texttt{pdf}: no problems with fonts, formulas,
+      program versions
+\item Easier to keep consistent style, fonts, highlighting, etc.
+\item Math typesetting in \TeX\ is the best:
+\begin{equation*}
+\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
+-\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
++ V(\mathbf{r})\Psi(\mathbf{r},t)
+\end{equation*}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{性能和可靠性试验室重点工作}
+%\framesubtitle{Selecting the SINTEF Theme}
+To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the
+preamble:
+\begin{block}{Minimum SINTEF Beamer Document}
+\verb|\documentclass{beamer}|\\
+\verb|\usetheme{sintef}|\\
+\verb|\begin{document}|\\
+\verb|\begin{frame}{Hello, world!}|\\
+\verb|\end{frame}|\\
+\verb|\end{document}|\\
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{测试开发室重点工作}
+To set a typical title page, you call some commands in the preamble:
+\begin{block}{The Commands for the Title Page}
+\begin{verbatim}
+\title{Sample Title}
+\subtitle{Sample subtitle}
+\author{First Author, Second Author}
+\date{\today} % Can also be (ab)used for conference name &c.
+\end{verbatim}
+\end{block}
+You can then write out the title page with \verb|\maketitle|.
+
+To set a \textbf{background image} use the \verb|\titlebackground| command 
+before \verb|\maketitle|; its only argument is the name (or path) of a graphic 
+file.
+
+If you use the \textbf{starred version} \verb|\titlebackground*|, the image 
+will be clipped to a split view on the right side of the title slide.
+
+\end{frame}
+
+\begin{frame}[fragile]{2024年KPI完成情况}
+%\framesubtitle{It's really easy!}
+\begin{itemize}[<+->]
+\item 标准化、平台化的测试管理体系建设
+\item 自动化测试技术的应用
+\end{itemize}
+\begin{block}{这里是具体的列子：}<+->
+\begin{verbatim}
+\begin{frame}{标准化、平台化的测试管理体系建设}
+  \framesubtitle{测试体系}
+  \begin{itemize}[<+->]
+    \item 标准化、平台化的测试管理体系建设
+    \item 自动化测试技术的应用
+  \end{itemize}\end{frame}
+\end{verbatim}
+\end{block}
+\end{frame}

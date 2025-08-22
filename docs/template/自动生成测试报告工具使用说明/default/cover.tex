@@ -1,0 +1,53 @@
+% ======== 标题 ==============================
+
+%\title{论文标题（中文）}
+
+%\author{作者姓名\thanks{单位信息\quad 邮箱：abc@example.com}}
+%\date{2025 年 8 月 12 日}
+%\maketitle
+%\newpage
+
+% 封面
+% 里通常只包含标题页、作者、机构、日期等信息，常用
+
+% ======== 1.Cover页，第一页，标题 ==============================
+
+% 1. 在文档中设置标题、作者
+\title{测试报告数据自动映射工具\\使用说明 \\ \small{v. 1.0.0}}
+\author{Qiao Lei}
+
+\thispagestyle{fancy}
+
+% 2. 在 \begin{document} 后调用 \maketitle
+\maketitle
+
+\clearpage
+
+% ======== 2. 摘要 ==============================
+%\renewcommand{\abstractname}{摘要}
+%\renewcommand{\abstractnamefont}{\fontsize{14}{16}\selectfont}
+% 可以加载abstract包，或者直接用下面标准类，改变字体
+\renewcommand{\abstractname}{\Large\bfseries 摘要}
+
+\pagenumbering{arabic}
+% 当前页从page2 开始
+\setcounter{page}{2}
+
+\begin{abstract}
+测试中心负责对事业部委托的智能电表样品进行性能与可靠性评估，并依据 ISO/IEC 17025 资质标准出具正式实验室认可报告。
+在以往的操作流程中，测试人员需将大量测量数据，尤其是基本误差数据，手工录入报告模板，既耗时又容易发生疏漏。为克服这一瓶颈，我们研发了一款自动化数据填报工具，能够直接将测量系统输出的数据导入并完成报告的填充，显著提升工作效率与数据准确性。本篇文章将系统介绍该工具的功能、使用方法，并在必要时提供二次开发的指导。
+\end{abstract}
+
+% ======== 3. 关键词 ==============================
+
+\begin{keywords}
+
+测试，报告，自动化
+
+\end{keywords}
+
+\clearpage
+
+% ======== 4. 自动生成目录 ==============================
+\tableofcontents
+\clearpage
