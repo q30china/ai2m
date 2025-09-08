@@ -47,6 +47,7 @@
 - 几乎所有的事情，所有的期望，所有的荣耀，对失败的恐惧，一切都会在死亡面前淡去，只留下真正重要的东西。
 - 你本就一无所有, 没有理由不去追随你的内心。（You are already naked, thers is no reason not to follow your heart）
 - 死亡就是生命最好的发明，是生命更迭的动力，它去除老旧，拥抱新生。
-- 一副清晨乡村公路的照片，是那种你要去搭便车旅行的话，就会看到的角色。Stay Hungry，Stay Foolish。
+- 一副清晨乡村公路的照片，是那种你要去搭便车旅行的话，就会看到的角色。Stay Hungry，Stay Foolish。（Whole Earth Catalog-Stewart Brand 70年代中期 停刊告别语）
+<img src="net_asset/graduate.png" alt="闭刊照片" style="display: block; margin: 0 auto;">
   
 ## 
