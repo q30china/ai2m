@@ -73,11 +73,24 @@
 
 主流道教与民间信仰的“五大财神”
 - 中路财神 - 王亥，他是中国商业的鼻祖，发明了牛车，鼓励族人用牛车拉着货物去和其他部落进行交易。他所从事的行当叫做“王业”，所以被尊为“中路财神”或“大财神”。
+<img src="csm_asset/中_王亥.jpg" alt="中路财神" style="display: block; margin: 0 auto;">
 - 东路财神 - 比干，传说他被纣王挖心后，因没了“心”，所以办事公平，无私心，不偏不倚。被奉为文财神，掌管东路。
+<img src="csm_asset/东_比干.jpg" alt="东路财神" style="display: block; margin: 0 auto;">
 - 南路财神 - 柴荣，他年轻时经营瓷窑、贩卖雨伞等生意，发家致富，后来当了皇帝。百姓尊其为“柴王爷”或“天财星君”下凡。他掌管南路。
+<img src="csm_asset/南_柴荣.jpg" alt="南路财神" style="display: block; margin: 0 auto;">
 - 西路财神 - 关公，商人做生意最重“信用”和“义气”，关公是忠义的化身，因此被奉为武财神。同时，传说关公擅长算数，发明了“日清薄”。他掌管西路
+<img src="csm_asset/西_关羽.jpg" alt="西路财神" style="display: block; margin: 0 auto;">
 - 北路财神 - 赵公明，在《封神演义》中，姜子牙封赵公明为“金龙如意正一龙虎玄坛真君”，率领“招宝”、“纳珍”、“招财”、“利市”四位仙官，专司迎祥纳福、商贾买卖。他是最正统、最专业的财神。他掌管北路。
+<img src="csm_asset/北_赵公明.jpg" alt="北路财神" style="display: block; margin: 0 auto;">
 
+- 东北财神
+<img src="csm_asset/东北_李诡祖.jpg" alt="东北财神" style="display: block; margin: 0 auto;">
+- 东南财神
+<img src="csm_asset/东南_范蠡.jpg" alt="东南财神" style="display: block; margin: 0 auto;">
+- 西北财神
+<img src="csm_asset/西北_刘海蟾.jpg" alt="西北财神" style="display: block; margin: 0 auto;">
+- 西南财神
+<img src="csm_asset/西南_子贡.jpg" alt="西南财神" style="display: block; margin: 0 auto;">
 
 
 ### 佛教财神体系
@@ -87,10 +100,15 @@
 1. 藏传佛教的财神多为护法神，分五色对应五方佛，各司不同财运：
 财神名	颜色	象征	职能
 **黄财神**	黄色	中央财神（主尊）	主财富增长，最受欢迎  Jambhala
+<img src="csm_asset/黄财神.webp" alt="黄财神" style="display: block; margin: 0 auto;">
 **白财神**	白色	观音化身	除贫苦，求清净财 Jambhala Gape
+<img src="csm_asset/白财神.webp" alt="白财神" style="display: block; margin: 0 auto;">
 **红财神**	红色	怀爱、权势	求人缘财、事业成功 Jambhala Marpo
+<img src="csm_asset/红财神.webp" alt="红财神" style="display: block; margin: 0 auto;">
 **黑财神**	黑色	祛除业障	适合穷人，快速招偏财 Jambhala Nagpo
+<img src="csm_asset/黑财神.webp" alt="黑财神" style="display: block; margin: 0 auto;">
 **绿财神**	绿色	增长功德	农业、健康相关财运 Jambhala Jangpo
+<img src="csm_asset/绿财神.webp" alt="绿财神" style="display: block; margin: 0 auto;">
 
 财神	藏文名（转写）	梵文名	汉译全称
 **黄财神**	རྣམ་ཐོས་སྲས་པོ་ (Namthöse)	Jambhala	黄瞻巴拉（藏巴拉）
@@ -123,6 +141,7 @@
 形象：
 常见白衣观音、千手千眼观音、杨柳观音等化身，手持净瓶与杨柳枝，象征洒净世间苦难。
 藏传佛教中为四臂观音、十一面观音等。
+<img src="csm_asset/观世音菩萨.jpeg" alt="观世音菩萨" style="display: block; margin: 0 auto;">
 
 礼拜意义：
 
@@ -137,6 +156,7 @@
 形象：
 手持智慧剑（断烦恼）和般若经（表智慧），骑青狮子（喻智慧威猛）。
 童子形，象征纯净无染的智慧。
+<img src="csm_asset/文殊菩萨.jpeg" alt="文殊菩萨" style="display: block; margin: 0 auto;">
 
 礼拜意义：
 开智慧：学子、修行者祈求学业进步、辩才无碍、破除迷惑。
@@ -150,6 +170,7 @@
 形象：
 骑六牙白象（表忍辱负重、行愿坚定），手持如意或莲花。
 常与文殊菩萨同为释迦牟尼佛的胁侍，代表“解行并重”。
+<img src="csm_asset/普贤菩萨.jpeg" alt="普贤菩萨" style="display: block; margin: 0 auto;">
 
 礼拜意义：
 行愿圆满：求事业、修行中能持之以恒，落实理想。
@@ -162,6 +183,7 @@
 道场：安徽九华山
 形象：
 比丘相，持锡杖与宝珠，脚踏莲台或坐谛听神兽。
+<img src="csm_asset/地藏王.jpeg" alt="地藏王菩萨" style="display: block; margin: 0 auto;">
 
 礼拜意义：
 超度亡灵：为亡者祈福，避免堕入恶道，常诵《地藏经》。
