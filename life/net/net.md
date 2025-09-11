@@ -1,3 +1,17 @@
+---
+ebook:
+  title: Test
+  authors: Test
+  args: ["--embed-all-fonts", "--preserve-cover-aspect-ratio"]
+
+# 以下设置可能有助于图片路径处理
+markdown:
+  # 导出时图片的保存目录（相对于输出文件）
+  image_dir: /net_asset
+  # 尝试使用绝对图片路径（相对于项目根目录）
+  absolute_image_path: true
+---
+
 ## 戴旭09年关于GDP的理论
 ---------
 - GDP构成是什么？你有100万，我也有100万，你的100万是卖儿，卖女，卖出来的。
@@ -48,6 +62,8 @@
 - 你本就一无所有, 没有理由不去追随你的内心。（You are already naked, thers is no reason not to follow your heart）
 - 死亡就是生命最好的发明，是生命更迭的动力，它去除老旧，拥抱新生。
 - 一副清晨乡村公路的照片，是那种你要去搭便车旅行的话，就会看到的角色。Stay Hungry，Stay Foolish。（Whole Earth Catalog-Stewart Brand 70年代中期 停刊告别语）
-<img src="net_asset/graduate.png" alt="闭刊照片" style="display: block; margin: 0 auto;">
-  
+
+
+![图片描述](net_asset/graduate.png)
+
 ## 
