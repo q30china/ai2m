@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{lipsum} % 用于生成示例文本，实际使用时可以移除
+
+% 页面布局设置
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% 加载配置文件
+\input{config}
+
+\begin{document}
+
+% 信件头部
+\begin{center}
+    {\color{titlecolor} \Huge \textbf{\lettertitle}} \\
+    \vspace{0.3cm}
+  %  {\color{subtitlecolor} \large \lettersubtitle}
+\end{center}
+
+% 分隔线
+\noindent{\color{linecolor} \rule{\textwidth}{1pt}}
+
+% 发件人信息区域
+\begin{minipage}{0.5\textwidth}
+    {\color{sendercolor} \textbf{发件人信息}} \\
+    {\color{infocolor} 姓名：\sendername} \\
+    {\color{infocolor} 地址：\senderaddress} \\
+ %   {\color{infocolor} 电话：\senderphone} \\
+ %   {\color{infocolor} 邮箱：\senderemail}
+\end{minipage}
+\hfill
+% 收件人信息区域
+\begin{minipage}{0.4\textwidth}
+    \begin{flushright}
+        {\color{receivercolor} \textbf{收件人信息}} \\
+        {\color{infocolor} 姓名：\receivername} \\
+        {\color{infocolor} 地址：\receiveraddress} \\
+        {\color{infocolor} 日期：\letterdate}
+    \end{flushright}
+\end{minipage}
+
+% 分隔线
+%\vspace{0.5cm}
+%\noindent{\color{linecolor} \rule{\textwidth}{0.5pt}}
+
+% 信件正文
+\vspace{1cm}
+\noindent
+{\color{contentcolor} 
+\begin{minipage}{\textwidth}
+    % 加载信件内容
+    \input{letter_250924}
+\end{minipage}
+}
+
+% 图片插入区域（如果配置了图片路径）
+%\ifx\letterimage\empty
+%\else
+%    \vspace{1cm}
+%    \begin{figure}[h]
+%        \centering
+%        \includegraphics[width=\imagewidth]{\letterimage}
+%        \caption{\color{captioncolor} \imagecaption}
+%        \label{fig:letter-image}
+%    \end{figure}
+%\fi
+
+% 签名区域
+% \vfill
+
+\begin{flushleft}
+    {\color{signaturecolor} 
+    \textbf{此致} \\
+    \textbf{敬礼！} \\
+    \vspace{0cm}}
+\end{flushleft}
+
+\begin{flushright}
+    {\color{signaturecolor} 
+    \vspace{0cm}
+    \sendersignature \\
+    \signaturedate}
+\end{flushright}
+
+
+\end{document}

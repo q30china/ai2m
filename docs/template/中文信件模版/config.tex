@@ -1,0 +1,52 @@
+% ================================
+% 颜色配置区域
+% ================================
+
+% 主色调配置
+\definecolor{titlecolor}{RGB}{0, 82, 155}        % 标题颜色（商务蓝）
+\definecolor{subtitlecolor}{RGB}{128, 0, 0}      % 副标题颜色（深红色）
+\definecolor{sendercolor}{RGB}{0, 100, 0}        % 发件人标题颜色（深绿色）
+\definecolor{receivercolor}{RGB}{139, 69, 19}    % 收件人标题颜色（棕色）
+\definecolor{infocolor}{RGB}{80, 80, 80}         % 信息文字颜色（深灰色）
+\definecolor{contentcolor}{RGB}{0, 0, 0}         % 正文颜色（黑色）
+\definecolor{signaturecolor}{RGB}{128, 0, 128}   % 签名颜色（紫色）
+\definecolor{captioncolor}{RGB}{0, 0, 139}       % 图片标题颜色（蓝色）
+\definecolor{linecolor}{RGB}{200, 200, 200}      % 分隔线颜色（浅灰色）
+
+% ================================
+% 信件基本信息配置
+% ================================
+
+% 信件标题和副标题
+\newcommand{\lettertitle}{朋友往来信函}
+\newcommand{\lettersubtitle}{—— 关于 ——}
+
+% 发件人信息
+\newcommand{\sendername}{乔磊}
+\newcommand{\senderaddress}{浙江省杭州市拱墅区莫干山路1418-5 杭州海兴电力科技股份有限公司 配用电事业群 测试部}
+% \newcommand{\senderphone}{138-xxxx-xxxx}
+% \newcommand{\senderemail}{zhangsan@company.com}
+\newcommand{\sendersignature}{乔磊} % 手写签名
+\newcommand{\signaturedate}{\today} % 签名日期
+
+% 收件人信息
+\newcommand{\receivername}{钭军勇}
+\newcommand{\receivernickname}{豆豆兄弟}
+\newcommand{\receiveraddress}{上海市浦东新区周浦镇康沈路2077号 3134}
+\newcommand{\letterdate}{\today} % 信件日期
+
+% ================================
+% 图片配置
+% ================================
+
+% 图片路径（如果不需要图片，请设为空：\newcommand{\letterimage}{}）
+\newcommand{\letterimage}{example-image} % 示例图片，实际使用时替换为你的图片路径
+\newcommand{\imagecaption}{相关业务示意图} % 图片标题
+\newcommand{\imagewidth}{0.8\textwidth} % 图片宽度比例
+
+% ================================
+% 其他配置
+% ================================
+
+% 是否显示调试网格（用于布局调整）
+\newcommand{\showdebuggrid}{false} % 设为 true 可以显示调试网格线
